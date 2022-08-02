@@ -3,7 +3,7 @@ import ArticleImage from "./ArticleImage";
 
 const ArticleCard = ({ title, content, author }) => {
 	return (
-		<div className='rounded-xl bg-white lg:max-w-[350px] lg:mx-auto max-w-[375px]'>
+		<div className='rounded-xl bg-white lg:max-w-[350px] lg:mx-auto max-w-[375px] cursor-pointer hover:bg-gray-100'>
 			<ArticleImage title={title} />
 			<div className='p-4'>
 				<span className='text-xs'>{author}</span>

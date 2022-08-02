@@ -3,7 +3,7 @@ import FeatureCard from "./FeatureCard";
 
 const Features = () => {
 	return (
-		<div className='px-[10%] py-24 features relative z-[-2] lg:text-center'>
+		<div className='px-[10%] py-24 features relative lg:text-center'>
 			<div>
 				<h1 className='text-[40px] opacity-90 leading-normal sm:text-[32px]'>
 					Why choose Easybank?

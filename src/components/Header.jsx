@@ -11,7 +11,7 @@ const Header = () => {
 				alt='mockups'
 			/>
 			<div className='relative lg:top-[-150px]'>
-				<div className='max-w-[27rem] lg:w-full text-center lg:mx-auto'>
+				<div className='max-w-[27rem] lg:w-full lg:text-center lg:mx-auto'>
 					<h1 className='text-[50px] opacity-90 leading-tight sm:text-[40px] xs:text-[36px]'>
 						Next generation digital banking
 					</h1>

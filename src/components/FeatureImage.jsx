@@ -8,7 +8,7 @@ const FeatureImage = ({ title }) => {
 	return (
 		<div className='my-8'>
 			<img
-				className='lg:mx-auto cursor-pointer hover:scale-105'
+				className='lg:mx-auto cursor-pointer hover:scale-105 transition-transform ease-in-out delay-100'
 				src={
 					title === "Online Banking"
 						? onlineBankingIcon

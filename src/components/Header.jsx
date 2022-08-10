@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import mockup from "../assets/images/image-mockups.png";
+import { motion } from "framer-motion";
 
 const Header = () => {
 	return (
@@ -16,9 +17,8 @@ const Header = () => {
 						Next generation digital banking
 					</h1>
 					<p className='opacity-60 text-lg my-6 leading-relaxed font-medium'>
-						Take your financial life online. Your Easybank account will be
-						a one-stop-shop for spending, saving, budgeting, investing,
-						and much more.
+						Take your financial life online. Your Easybank account will be a one-stop-shop for
+						spending, saving, budgeting, investing, and much more.
 					</p>
 				</div>
 				<div className='lg:mx-auto w-fit'>

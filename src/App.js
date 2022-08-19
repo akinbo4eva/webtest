@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 function App() {
 	return (
-		<div className='App relative'>
+		<div className='App relative overflow-clip cursor-default'>
 			<Navbar />
 			<Header />
 			<Features />

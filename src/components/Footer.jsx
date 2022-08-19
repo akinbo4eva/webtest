@@ -13,38 +13,38 @@ const Footer = () => {
 			<div className='flex gap-28 lg:justify-around md:block md:text-center'>
 				<div>
 					<div className='mb-12'>
-						<img src={logo} alt='logo' className='md:mx-auto' />
+						<img src={logo} alt='logo' className='md:mx-auto select-none' />
 					</div>
 					<div className='flex gap-3 md:max-w-[200px] md:mx-auto md:justify-between'>
-						<img src={facebook} alt='facebook' />
-						<img src={youtube} alt='youtube' />
-						<img src={twitter} alt='twitter' />
-						<img src={pinterest} alt='pinterest' />
-						<img src={instagram} alt='instagram' />
+						<img className='select-none' src={facebook} alt='facebook' />
+						<img className='select-none' src={youtube} alt='youtube' />
+						<img className='select-none' src={twitter} alt='twitter' />
+						<img className='select-none' src={pinterest} alt='pinterest' />
+						<img className='select-none' src={instagram} alt='instagram' />
 					</div>
 				</div>
 				<div className='md:mt-6'>
 					<ul className='footer-link-list'>
-						<li href='#' className='cursor-pointer'>
+						<li href='#' className='cursor-pointer select-none'>
 							About Us
 						</li>
-						<li href='#' className='cursor-pointer'>
+						<li href='#' className='cursor-pointer select-none'>
 							Contact
 						</li>
-						<li href='#' className='cursor-pointer'>
+						<li href='#' className='cursor-pointer select-none'>
 							Blog
 						</li>
 					</ul>
 				</div>
 				<div className='md:mt-6'>
 					<ul className='footer-link-list'>
-						<li href='#' className='cursor-pointer'>
+						<li href='#' className='cursor-pointer select-none'>
 							Careers
 						</li>
-						<li href='#' className='cursor-pointer'>
+						<li href='#' className='cursor-pointer select-none'>
 							Support
 						</li>
-						<li href='#' className='cursor-pointer'>
+						<li href='#' className='cursor-pointer select-none'>
 							Privacy Policy
 						</li>
 					</ul>
@@ -55,9 +55,7 @@ const Footer = () => {
 					<Button />
 				</div>
 				<div className='ml-auto lg:mx-auto'>
-					<span className='opacity-70'>
-						© Easybank. All Rights Reserved
-					</span>
+					<span className='opacity-70 select-none'>© Easybank. All Rights Reserved</span>
 				</div>
 			</div>
 		</div>

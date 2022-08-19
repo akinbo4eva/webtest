@@ -6,7 +6,7 @@ const ArticleCard = ({ title, content, author }) => {
 	return (
 		<motion.div
 			className='rounded-xl bg-white lg:max-w-[350px] lg:mx-auto max-w-[375px] cursor-pointer hover:bg-gray-100 shadow-md hover:shadow-lg'
-			animate={{
+			whileInView={{
 				scale: 1,
 			}}
 			initial={{
@@ -24,9 +24,9 @@ const ArticleCard = ({ title, content, author }) => {
 			}}>
 			<ArticleImage title={title} />
 			<div className='p-4'>
-				<span className='text-xs'>{author}</span>
-				<h4 className='opacity-80 text-lg my-2'>{title}</h4>
-				<p className='opacity-60 leading-normal text-sm'>{content}</p>
+				<span className='text-xs select-none'>{author}</span>
+				<h4 className='opacity-80 text-lg my-2 select-none'>{title}</h4>
+				<p className='opacity-60 leading-normal text-sm select-none'>{content}</p>
 			</div>
 		</motion.div>
 	);

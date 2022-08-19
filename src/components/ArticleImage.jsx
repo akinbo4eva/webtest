@@ -20,7 +20,7 @@ const ArticleImage = ({ title }) => {
 						: restaurant
 				}
 				alt={title}
-				className='rounded-t-lg h-[156px] w-[100%]'
+				className='rounded-t-lg h-[156px] w-[100%] select-none'
 			/>
 		</div>
 	);

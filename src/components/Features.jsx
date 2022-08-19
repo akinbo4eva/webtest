@@ -3,33 +3,35 @@ import FeatureCard from "./FeatureCard";
 import { motion } from "framer-motion";
 
 const Features = () => {
-	const featuresBoxVariant = {
+	const featuresVariant = {
 		visible: {
-			x: 0,
-			transition: {
-				type: "spring",
-				stiffness: 50,
-				when: "beforeChildren",
-			},
+			opacity: 1,
+			when: "beforeChildren",
 		},
 		hidden: {
-			x: "-5000px",
+			opacity: 1,
 		},
 	};
 	const featuresItemsVariant = {
 		visible: {
-			opacity: 1,
 			x: 0,
-			staggerChildren: 0.5,
+			staggerChildren: 1,
+			transition: {
+				type: "spring",
+				duration: 1,
+			},
 		},
-		hidden: {
-			opacity: 0,
-			x: -"20px",
-		},
+		hidden: { x: 1000 },
 	};
 	return (
 		<div className='px-[10%] py-24 features relative lg:text-center'>
-			<motion.div variants={featuresBoxVariant} animate='visible' initial='hidden'>
+			<motion.div
+				whileInView={{ x: 0 }}
+				transition={{
+					type: "spring",
+					duration: 1.5,
+				}}
+				initial={{ x: -500 }}>
 				<h1 className='text-[40px] opacity-90 leading-normal sm:text-[32px]'>
 					Why choose Easybank?
 				</h1>
@@ -42,8 +44,8 @@ const Features = () => {
 			</motion.div>
 			<motion.div
 				className='grid grid-cols-4 gap-12 mt-8 lg:grid-cols-2 md:grid-cols-1'
-				variants={featuresBoxVariant}
-				animate='visible'
+				variants={featuresVariant}
+				whileInView='visible'
 				initial='hidden'>
 				<motion.div variants={featuresItemsVariant}>
 					<FeatureCard

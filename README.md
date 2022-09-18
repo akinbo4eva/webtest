@@ -6,8 +6,6 @@ Banking website built with React.js
 
 <!-- ![Design preview for the Easy Bank Website](./desktop-preview.jpg) -->
 
-## https://easy-bank-fm-project.netlify.app/
-
 ## Welcome! 👋
 
 In the project directory, you can run:

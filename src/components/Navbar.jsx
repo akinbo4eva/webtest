@@ -12,7 +12,7 @@ const Navbar = () => {
 			<div className='absolute top-0 left-0 right-0 z-[999]'>
 				<div className={navDisplay ? "nav fixed-nav" : "nav"}>
 					<div>
-						<img className='select-none' src={logo} alt='logo' />
+						<img className='select-none' src={logo} alt='logo' width="40px" height="40px"/>
 					</div>
 					<div className='flex justify-between items-center gap-8 md:hidden'>
 						<span className='select-none opacity-60 hover:opacity-90'>

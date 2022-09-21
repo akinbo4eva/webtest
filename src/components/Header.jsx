@@ -10,10 +10,10 @@ const Header = () => {
 		<>
 			<div className='px-[120px] lg:px-[10px] bg-[#F4FDF8] flex md:flex-col items-center space-x-12 md:space-x-0 mt-10'>
 				<div className='flex-1'>
-					<h1 className='text-[64px] lg:text-[44px] md:text-[64px] text-[#0A0903] font-bold'>
+					<h1 className='text-[64px] lg:text-[44px] md:text-[64px] xs:text-[44px] text-[#0A0903] font-bold'>
 						Easy Payments,
 					</h1>
-					<h1 className='text-[64px] lg:text-[44px] md:text-[64px] text-[#008037] font-bold'>
+					<h1 className='text-[64px] lg:text-[44px] md:text-[64px] xs:text-[44px] text-[#008037] font-bold'>
 						Everywhere.
 					</h1>
 					<p className='text-[18px] lg:text-[16px] md:text-[18px] text-[rgba(10, 9, 3, 0.7)] font-light mt-[32px] mb-[64px] opacity-70'>

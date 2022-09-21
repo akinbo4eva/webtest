@@ -41,7 +41,7 @@ function FinanceSection() {
 						))}
 					</div>
 					<div className='flex justify-end items-end mt-[40px] mb-[44px]'>
-						<button className='outline-none w-[180px] h-[46px] bg-[#F1EDDA] rounded-[8px] font-medium text-[20px] text-[#806B00]'>
+						<button className='outline-none w-[180px] sm:w-full h-[46px] bg-[#F1EDDA] rounded-[8px] font-medium text-[20px] text-[#806B00]'>
 							Contact Us
 						</button>
 					</div>

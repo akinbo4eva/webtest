@@ -44,7 +44,7 @@ function PaymentSection() {
 						))}
 					</div>
 					<div className='flex justify-end items-end mt-[40px] mb-[44px]'>
-						<button className='outline-none w-[180px] h-[46px] bg-[#DAF1E4] rounded-[8px] font-medium text-[20px] text-[#008037]'>
+						<button className='outline-none w-[180px] sm:w-full h-[46px] bg-[#DAF1E4] rounded-[8px] font-medium text-[20px] text-[#008037]'>
 							Contact Us
 						</button>
 					</div>

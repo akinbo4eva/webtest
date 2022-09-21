@@ -17,7 +17,7 @@ FROM nginx:alpine
 COPY --from=base /app/build /usr/share/nginx/html
 # needed this to make React Router work properly
 RUN rm /etc/nginx/conf.d/default.conf
-RUN ls
+
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Expose port 80 for HTTP Traffic
 EXPOSE 80

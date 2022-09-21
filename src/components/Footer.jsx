@@ -69,7 +69,7 @@ const Footer = () => {
 					<div className='flex items-center my-[24px]'>
 						<input
 							type='text'
-							className='w-[319px] h-[55px] rounded-l-[8px] p-0 m-0 pl-6 outline-none'
+							className='w-[319px] sm:w-full h-[55px] rounded-l-[8px] p-0 m-0 pl-6 outline-none'
 						/>
 						<button className='p-0 m-0 w-[137px] h-[55px] bg-[#CAD1CD] text-[#003015] text-[24px] rounded-l-0 rounded-r-[8px]'>
 							Send

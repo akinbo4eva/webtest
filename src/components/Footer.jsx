@@ -1,62 +1,104 @@
-import React from "react";
-import Button from "./Button";
-import logo from "../assets/icons/light-logo.svg";
-import facebook from "../assets/icons/icon-facebook.svg";
-import instagram from "../assets/icons/icon-instagram.svg";
-import pinterest from "../assets/icons/icon-pinterest.svg";
-import twitter from "../assets/icons/icon-twitter.svg";
-import youtube from "../assets/icons/icon-youtube.svg";
+import React from 'react';
+import facebook from '../assets/images/jam_facebook-square (1).svg';
+import instagram from '../assets/images/akar-icons_instagram-fill (1).svg';
+import twitter from '../assets/images/jam_twitter-square (1).svg';
+import linkedin from '../assets/images/ant-design_linkedin-outlined (1).svg';
 
 const Footer = () => {
 	return (
-		<div className='px-[10%] py-16 relative footer text-white flex justify-between items-start lg:block'>
-			<div className='flex gap-28 lg:justify-around md:block md:text-center'>
-				<div>
-					<div className='mb-12'>
-						<img src={logo} alt='logo' className='md:mx-auto select-none' />
-					</div>
-					<div className='flex gap-3 md:max-w-[200px] md:mx-auto md:justify-between'>
-						<img className='select-none' src={facebook} alt='facebook' />
-						<img className='select-none' src={youtube} alt='youtube' />
-						<img className='select-none' src={twitter} alt='twitter' />
-						<img className='select-none' src={pinterest} alt='pinterest' />
-						<img className='select-none' src={instagram} alt='instagram' />
-					</div>
+		<div className='w-full bg-[#003015] px-[120px] lg:px-[10px]'>
+			<div className='grid grid-cols-6 lg:grid-cols-4 md:grid-cols-2 lg:gap-y-10 py-[80px]'>
+				<div className='md:col-span-2 '>
+					<h4 className='mb-[24px] text-[#F4FDF8] text-[32px]'>About</h4>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal'>about</li>
 				</div>
-				<div className='md:mt-6'>
-					<ul className='footer-link-list'>
-						<li href='#' className='cursor-pointer select-none'>
-							About Us
-						</li>
-						<li href='#' className='cursor-pointer select-none'>
-							Contact
-						</li>
-						<li href='#' className='cursor-pointer select-none'>
-							Blog
-						</li>
-					</ul>
+				<div className='md:col-span-2'>
+					<h4 className='mb-[24px] text-[#F4FDF8] text-[32px]'>About</h4>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal'>about</li>
 				</div>
-				<div className='md:mt-6'>
-					<ul className='footer-link-list'>
-						<li href='#' className='cursor-pointer select-none'>
-							Careers
-						</li>
-						<li href='#' className='cursor-pointer select-none'>
-							Support
-						</li>
-						<li href='#' className='cursor-pointer select-none'>
-							Privacy Policy
-						</li>
-					</ul>
+				<div className='md:col-span-2'>
+					<h4 className='mb-[24px] text-[#F4FDF8] text-[32px]'>About</h4>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal'>about</li>
+				</div>
+				<div className='md:col-span-2'>
+					<h4 className='mb-[24px] text-[#F4FDF8] text-[32px]'>About</h4>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal mb-[16px]'>
+						about
+					</li>
+					<li className='text-[16px] text-[#CAD1CD] font-normal'>about</li>
+				</div>
+				<div className='col-span-2 lg:col-span-4 '>
+					<h3 className='mb-[24px] text-[#F4FDF8] text-[32px]'>Newsletter</h3>
+					<p className='text-[16px] text-[#CAD1CD] font-normal font-sarabunextra'>
+						Lörem ipsum koskapet isk och vaväss dinera, mansplaining. Padda
+						pronar dit sask.{' '}
+					</p>
+					<div className='flex items-center my-[24px]'>
+						<input
+							type='text'
+							className='w-[319px] h-[55px] rounded-l-[8px] p-0 m-0 pl-6 outline-none'
+						/>
+						<button className='p-0 m-0 w-[137px] h-[55px] bg-[#CAD1CD] text-[#003015] text-[24px] rounded-l-0 rounded-r-[8px]'>
+							Send
+						</button>
+					</div>
+					<div className='flex space-x-6'>
+						<img src={facebook} alt='' className='cursor-pointer' />
+						<img src={instagram} alt='' className='cursor-pointer' />
+						<img src={linkedin} alt='' className='cursor-pointer' />
+						<img src={twitter} alt='' className='cursor-pointer' />
+					</div>
 				</div>
 			</div>
-			<div className='grid gap-4 lg:mt-12'>
-				<div className='ml-auto lg:mx-auto'>
-					<Button />
+			<div className='px-[20px]'>
+				<hr className='bg-[rgba(255, 213, 0, 0.3)] opacity-30' />
+			</div>
+
+			<div className='flex sm:flex-col justify-between items-center py-[40px]'>
+				<div className='flex space-x-6'>
+					<p className='text-[16px] text-[#CAD1CD] font-normal font-sarabunextra'>
+						Privacy .
+					</p>
+
+					<p className='text-[16px] text-[#CAD1CD] font-normal'>Policy .</p>
+					<p className='text-[16px] text-[#CAD1CD] font-normal'>Disclaimer</p>
 				</div>
-				<div className='ml-auto lg:mx-auto'>
-					<span className='opacity-70 select-none'>© Easybank. All Rights Reserved</span>
-				</div>
+				<p className='text-[16px] text-[#CAD1CD] font-normal'>
+					&copy;2022 SaySwitch
+				</p>
 			</div>
 		</div>
 	);

@@ -8,7 +8,11 @@ import close from '../assets/icons/icon-close.svg';
 const Navbar = ({ isLabel, setIsLabel }) => {
 	const [navDisplay, setNavDisplay] = useState(false);
 	const isLabelHandler = (identifier) => {
-		setIsLabel(identifier);
+		if (isLabel === identifier) {
+			setIsLabel('');
+		} else {
+			setIsLabel(identifier);
+		}
 	};
 	return (
 		<div

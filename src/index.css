@@ -53,6 +53,10 @@ p {
 	animation: floatImage 30s infinite alternate ease-in-out;
 }
 
+.animateIcon {
+	animation: floatIcon 250ms ease;
+}
+
 @keyframes floatImage {
 	/* from {
 		left: -100%;
@@ -73,6 +77,16 @@ p {
 	}
 	100% {
 		left: -100%;
+	}
+}
+
+@keyframes rotateIcon {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(180deg);
 	}
 }
 

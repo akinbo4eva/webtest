@@ -4,15 +4,24 @@ import Keydown from '../assets/icons/Keyboard arrow down.svg';
 import logo from '../assets/icons/logo.svg';
 import hamburger from '../assets/icons/icon-hamburger.svg';
 import close from '../assets/icons/icon-close.svg';
+import arrowright from '../assets/icons/chevron-forward-outline (2).svg';
+import arrowback from '../assets/icons/chevron-back-outline (2).svg';
 
 const Navbar = ({ isLabel, setIsLabel }) => {
 	const [navDisplay, setNavDisplay] = useState(false);
+	const [mobileDisplay, setMobileDisplay] = useState('');
+
 	const isLabelHandler = (identifier) => {
 		if (isLabel === identifier) {
 			setIsLabel('');
 		} else {
 			setIsLabel(identifier);
 		}
+	};
+
+	const clearHandler = () => {
+		setNavDisplay(false);
+		setMobileDisplay('');
 	};
 	return (
 		<div
@@ -75,19 +84,56 @@ const Navbar = ({ isLabel, setIsLabel }) => {
 			</div>
 			{navDisplay && (
 				<div className='bg-gray-600/30 backdrop-blur-sm w-full h-[100%] fixed left-0 top-[72px] z-[100]'>
-					<div className='mt-[20px] mx-auto grid text-[16px] text-center gap-4 w-[90%] bg-white rounded-md font-medium py-8'>
-						<span className='select-none opacity-70 hover:opacity-90'>
-							<button href='#'>Home</button>
-						</span>
-						<span className='select-none opacity-70 hover:opacity-90'>
-							<button href='#'>Businesses</button>
-						</span>
-						<span className='select-none opacity-70 hover:opacity-90'>
-							<button href='#'>About</button>
-						</span>
-						<span className='select-none opacity-70 hover:opacity-90'>
-							<button href='#'>Careers</button>
-						</span>
+					<div className='mt-[20px] mx-auto grid text-[16px] text-center gap-4 w-[90%] bg-white rounded-md font-medium py-8 px-10 relative'>
+						<div
+							onClick={() => setMobileDisplay('products')}
+							className='select-none opacity-70 hover:opacity-90'>
+							<li className='flex items-end'>
+								Products{' '}
+								<span
+									className={`ml-[5px] ${
+										isLabel === 'products' && 'transition-all rotate-180'
+									}`}>
+									<img src={arrowright} alt='' className='w-4 h-4' />
+								</span>{' '}
+							</li>
+						</div>
+						<div
+							onClick={() => setMobileDisplay('business')}
+							className='select-none opacity-70 hover:opacity-90'>
+							<li className='flex items-end'>
+								Businesses
+								<span
+									className={`ml-[5px] ${
+										isLabel === 'products' && 'transition-all rotate-180'
+									}`}>
+									<img src={arrowright} alt='' className='w-4 h-4' />
+								</span>{' '}
+							</li>
+						</div>
+						<div className='select-none opacity-70 hover:opacity-90'>
+							<li className='flex items-end'>About</li>
+						</div>
+						<div className='select-none opacity-70 hover:opacity-90'>
+							<li className='flex items-end'>Careers</li>
+						</div>
+
+						{mobileDisplay !== '' ? (
+							<div className='absolute top-0 left-0 w-full h-full z-200 bg-white flex px-10 py-5'>
+								<div onClick={clearHandler} className='flex h-5'>
+									<span className='mr-2 flex items-center'>
+										<img
+											src={arrowback}
+											alt=''
+											className='w-4 h-4 text-black'
+										/>
+									</span>
+									<h2 className='text-black font-extrabold'>{mobileDisplay}</h2>
+								</div>
+							</div>
+						) : (
+							''
+						)}
 					</div>
 				</div>
 			)}

@@ -6,6 +6,7 @@ import hamburger from '../assets/icons/icon-hamburger.svg';
 import close from '../assets/icons/icon-close.svg';
 import arrowright from '../assets/icons/chevron-forward-outline (2).svg';
 import arrowback from '../assets/icons/chevron-back-outline (2).svg';
+import {Link} from 'react-router-dom'
 
 const Navbar = ({ isLabel, setIsLabel }) => {
 	const [navDisplay, setNavDisplay] = useState(false);
@@ -63,10 +64,10 @@ const Navbar = ({ isLabel, setIsLabel }) => {
 						</span>
 					</li>
 					<li className='text-[16px] text-[#0A0903] font-medium cursor-pointer relative before:w-0 before:h-1 before:absolute before:top-[-15px] before:right-0 before:bg-green-600 before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:before:bg-green-600'>
-						About
+						<Link to='/about'>About</Link>
 					</li>
 					<li className='text-[16px] text-[#0A0903] font-medium cursor-pointer relative before:w-0 before:h-1 before:absolute before:top-[-15px] before:right-0 before:bg-green-600 before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:before:bg-green-600'>
-						Careers
+						<Link to='/careers'>Careers</Link>
 					</li>
 				</div>
 				<button className='outline-none py-[12px] px-[20px] bg-[#DAF1E4] rounded-[15px] text-[18px] text-[#008037] lg:hidden'>

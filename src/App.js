@@ -7,16 +7,21 @@ import FinanceSection from './components/FinanceSection';
 import Sponsor from './components/Sponsor';
 import Footer from './components/Footer';
 import Overlay0ne from './components/Overlay0ne';
+import {Routes,Route } from 'react-router-dom';
 
 function App() {
 	const [isLabel, setIsLabel] = useState('');
 
 	return (
+	
 		<div className='w-full max-w-[1728px] m-auto scrollbar-hide relative'>
 			<div className='bg-[#F4FDF8] scrollbar-hide'>
 				<Navbar isLabel={isLabel} setIsLabel={setIsLabel} />
 				<Header />
 			</div>
+			{/* <Routes>
+				<Route path='/about' element={<About/>}>
+			</Routes> */}
 			<CoreProduct />
 			<PaymentSection />
 			<FinanceSection />

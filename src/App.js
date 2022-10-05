@@ -1,34 +1,30 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import CoreProduct from './components/CoreProduct';
-import PaymentSection from './components/PaymentSection';
-import FinanceSection from './components/FinanceSection';
-import Sponsor from './components/Sponsor';
-import Footer from './components/Footer';
+import {useState} from 'react'
+import {Route, Switch, Redirect} from 'react-router-dom'
+import AboutView from "./views/AboutView";
+import HomeView from "./views/HomeView";
 import Overlay0ne from './components/Overlay0ne';
-import {Routes,Route } from 'react-router-dom';
+
+
 
 function App() {
 	const [isLabel, setIsLabel] = useState('');
-
 	return (
-	
-		<div className='w-full max-w-[1728px] m-auto scrollbar-hide relative'>
-			<div className='bg-[#F4FDF8] scrollbar-hide'>
-				<Navbar isLabel={isLabel} setIsLabel={setIsLabel} />
-				<Header />
-			</div>
-			{/* <Routes>
-				<Route path='/about' element={<About/>}>
-			</Routes> */}
-			<CoreProduct />
-			<PaymentSection />
-			<FinanceSection />
-			<Sponsor />
-			<Footer />
+		<>
 
-			{isLabel !== '' ? (
+<Switch>
+<Route path='/' exact>
+<HomeView isLabel={isLabel} setIsLabel={setIsLabel} />
+</Route>
+<Route path='/about' exact>
+	<AboutView isLabel={isLabel} setIsLabel={setIsLabel} />
+	</Route>
+	
+	<Redirect path='*' to='/'/>
+
+	
+</Switch>
+
+{isLabel !== '' ? (
 				<div
 					onClick={() => setIsLabel('')}
 					className='absolute top-[72px] left-0 bg-green-600/30 backdrop-blur-sm w-full h-[100%] z-[1000]'>
@@ -37,7 +33,10 @@ function App() {
 			) : (
 				''
 			)}
-		</div>
+
+		</>
+
+	
 	);
 }
 

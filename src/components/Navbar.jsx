@@ -6,11 +6,12 @@ import hamburger from '../assets/icons/icon-hamburger.svg';
 import close from '../assets/icons/icon-close.svg';
 import arrowright from '../assets/icons/chevron-forward-outline (2).svg';
 import arrowback from '../assets/icons/chevron-back-outline (2).svg';
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 
 const Navbar = ({ isLabel, setIsLabel }) => {
 	const [navDisplay, setNavDisplay] = useState(false);
 	const [mobileDisplay, setMobileDisplay] = useState('');
+	const history = useHistory()
 
 	const isLabelHandler = (identifier) => {
 		if (isLabel === identifier) {
@@ -19,6 +20,7 @@ const Navbar = ({ isLabel, setIsLabel }) => {
 			setIsLabel(identifier);
 		}
 	};
+
 
 	const clearHandler = () => {
 		setNavDisplay(false);
@@ -70,7 +72,7 @@ const Navbar = ({ isLabel, setIsLabel }) => {
 						<Link to='/careers'>Careers</Link>
 					</li>
 				</div>
-				<button className='outline-none py-[12px] px-[20px] bg-[#DAF1E4] rounded-[15px] text-[18px] text-[#008037] lg:hidden'>
+				<button onClick={() => history.push('/contact')} className='outline-none py-[12px] px-[20px] bg-[#DAF1E4] rounded-[15px] text-[18px] text-[#008037] lg:hidden'>
 					Contact Us
 				</button>
 				<div
@@ -113,7 +115,7 @@ const Navbar = ({ isLabel, setIsLabel }) => {
 							</li>
 						</div>
 						<div className='select-none opacity-70 hover:opacity-90'>
-							<li className='flex items-end'>About</li>
+							<li className='flex items-end'><Link to='/about' >About</Link></li>
 						</div>
 						<div className='select-none opacity-70 hover:opacity-90'>
 							<li className='flex items-end'>Careers</li>

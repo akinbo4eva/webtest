@@ -118,7 +118,7 @@ const Navbar = ({ isLabel, setIsLabel }) => {
 							<li className='flex items-end'><Link to='/about' >About</Link></li>
 						</div>
 						<div className='select-none opacity-70 hover:opacity-90'>
-							<li className='flex items-end'>Careers</li>
+							<li className='flex items-end'><Link to='/careers' >Careers</Link></li>
 						</div>
 
 						{mobileDisplay !== '' ? (
